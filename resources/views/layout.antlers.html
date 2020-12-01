@@ -6,11 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title ?? site:name }}</title>
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+        {{ livewire:styles }}
     </head>
     <body class="bg-gray-200 font-sans leading-normal text-grey-800">
         <div class="mx-auto px-2 h-screen flex items-center justify-center">
             {{ template_content }}
         </div>
+        {{ livewire:scripts }}
         <script src="{{ mix src='/js/site.js' }}"></script>
     </body>
 </html>
